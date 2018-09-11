@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/new/prefix1">
+        <file>mtv-possibilities.ico</file>
+    </qresource>
+</RCC>
