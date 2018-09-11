@@ -1,6 +1,5 @@
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
-#include <form.h>
 #include <QMainWindow>
 
 namespace Ui {
