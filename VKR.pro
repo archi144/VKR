@@ -24,13 +24,18 @@ CONFIG += c++11
 
 SOURCES += \
         main.cpp \
-        mainwindow.cpp
+    form.cpp \
+    mainwindow.cpp
 
 HEADERS += \
-        mainwindow.h
+    form.h \
+    random.hpp \
+    isprime.h \
+    mainwindow.h
 
 FORMS += \
-        mainwindow.ui
+    form.ui \
+    mainwindow.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
