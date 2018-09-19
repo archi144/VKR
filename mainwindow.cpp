@@ -1,8 +1,12 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 #include <QLocale>
+<<<<<<< HEAD
 #include <random.hpp>
 #include <isprime.h>
+=======
+
+>>>>>>> f7653c0e3cac990aad01c8ba1f682d6377d1fe58
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::MainWindow)
