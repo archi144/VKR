@@ -31,7 +31,8 @@ HEADERS += \
     form.h \
     random.hpp \
     isprime.h \
-    mainwindow.h
+    mainwindow.h \
+    eratosphen.h
 
 FORMS += \
     form.ui \

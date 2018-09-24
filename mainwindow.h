@@ -29,7 +29,8 @@ private slots:
     void on_p_valueChanged(int arg1);
 
 
-    void on_fi_textChanged(const QString &arg1);
+    void on_Bit_SLider_valueChanged(int value);
+
 
 private:
     Ui::MainWindow *ui;
