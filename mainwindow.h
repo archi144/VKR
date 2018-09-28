@@ -26,13 +26,14 @@ private slots:
 
     void on_Calculate_Button_clicked();
 
-    void on_p_valueChanged(int arg1);
-
 
     void on_Bit_SLider_valueChanged(int value);
 
 
+    void on_Generate_button_clicked();
+
 private:
+
     Ui::MainWindow *ui;
     Form *sWindow;
 };

@@ -22,6 +22,11 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 CONFIG += c++11
 
+win32-g++ {
+    INCLUDEPATH += D:\QT\Libraries\boost_1_68_0\boost_mingw_53_32\include\boost-1_68
+} else:win32-msvc* {
+    INCLUDEPATH += D:\QT\Libraries\boost_1_68_0\boost_mingw_53_32\include\boost-1_68
+}
 SOURCES += \
         main.cpp \
     form.cpp \
