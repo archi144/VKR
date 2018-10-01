@@ -37,7 +37,8 @@ HEADERS += \
     random.hpp \
     isprime.h \
     mainwindow.h \
-    eratosphen.h
+    eratosphen.h \
+    sumstring.h
 
 FORMS += \
     form.ui \

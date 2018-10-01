@@ -3,10 +3,10 @@
 #include <random.hpp>
 #include <isprime.h>
 #include <QRandomGenerator>
-#include <QToolTip>
-#include <QPoint>
 #include <boost/multiprecision/cpp_int.hpp>
+#include <boost/lexical_cast.hpp>
 #include <QValidator>
+using boost::lexical_cast;
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::MainWindow)
@@ -16,7 +16,6 @@ MainWindow::MainWindow(QWidget *parent) :
     sWindow= new Form();
     connect(sWindow,&Form::firstWindow,this,&MainWindow::show);
     connect(this,SIGNAL(set_open_keys()),this,SLOT(get_open_keys()));
-  //  QToolTip::showText(ui->label->pos(),"Hello WOrld",ui->label);                // доделать
 
 }
 
@@ -25,6 +24,16 @@ MainWindow::~MainWindow()
     delete ui;
 }
 
+boost::multiprecision::uint1024_t MainWindow::bignum(QString a, QString b)
+{
+    return (lexical_cast <boost::multiprecision::uint1024_t>(a.toStdString()) *
+    lexical_cast <boost::multiprecision::uint1024_t>(b.toStdString()));
+}
+boost::multiprecision::uint1024_t MainWindow::bignum_1(QString a, QString b)
+{
+    return ((lexical_cast <boost::multiprecision::uint1024_t>(a.toStdString())-1) *
+    ((lexical_cast <boost::multiprecision::uint1024_t>(b.toStdString())-1)));
+}
 void MainWindow::get_open_keys()       // слот меняет текст открытого ключа
 {
     QString e=ui->e->toPlainText();
@@ -37,16 +46,16 @@ void MainWindow::get_open_keys()       // слот меняет текст от�
 
 void MainWindow::on_Calculate_Button_clicked()
 {
-    boost::multiprecision::uint1024_t p=ui->p->toPlainText().toInt();
-    boost::multiprecision::uint1024_t q=ui->p->toPlainText().toInt();
-    QString b;
-    b.setNum(p*q);                      // преобразовываю текст в число
-    ui->n->setText(b);                          // устанавливаю текст итогового поля
-    b.setNum((p-1)*(q-1));
-    ui->fi->setText(b);                 // записываю результат метода Эйлера
+    QString p=ui->p->toPlainText();
+    QString q=ui->q->toPlainText();
 
-    boost::multiprecision::uint1024_t MAX=ui->fi->toPlainText().toInt();
-    boost::multiprecision::uint1024_t A = Random::get(0,ui->fi->toPlainText().toInt());   //случайно выбираю число от 0 до φ(n)
+    boost::multiprecision::uint1024_t n=bignum(p,q);
+    QString b=QString::fromStdString(n.str());
+    ui->n->setText(QString::fromStdString(n.str()));                                  // устанавливаю текст итогового поля
+    n=bignum_1(p,q);
+    ui->fi->setText(QString::fromStdString(n.str()));                               // записываю результат метода Эйлера
+  //  boost::multiprecision::uint1024_t MAX=ui->fi->toPlainText().toInt();
+ //   boost::multiprecision::uint1024_t A = Random::get(0,ui->fi->toPlainText().toInt());   //случайно выбираю число от 0 до φ(n)
 //    if(isPrime(A) && MAX%A!=0)
 //    {
 
