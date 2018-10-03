@@ -60,6 +60,9 @@
     <property name="textFormat">
      <enum>Qt::AutoText</enum>
     </property>
+    <property name="textInteractionFlags">
+     <set>Qt::LinksAccessibleByMouse|Qt::TextSelectableByMouse</set>
+    </property>
    </widget>
    <widget class="QLabel" name="label">
     <property name="enabled">
@@ -87,6 +90,9 @@
     <property name="cursor">
      <cursorShape>WhatsThisCursor</cursorShape>
     </property>
+    <property name="mouseTracking">
+     <bool>true</bool>
+    </property>
     <property name="acceptDrops">
      <bool>false</bool>
     </property>
@@ -98,6 +104,9 @@
     </property>
     <property name="text">
      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Введите два взаимно простых числа&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+    <property name="textInteractionFlags">
+     <set>Qt::LinksAccessibleByMouse|Qt::TextSelectableByMouse</set>
     </property>
    </widget>
    <widget class="QPushButton" name="Calculate_Button">
@@ -184,6 +193,9 @@
     <property name="cursor">
      <cursorShape>WhatsThisCursor</cursorShape>
     </property>
+    <property name="mouseTracking">
+     <bool>true</bool>
+    </property>
     <property name="toolTip">
      <string>Функция Эйлера от Модуля</string>
     </property>
@@ -227,7 +239,7 @@
      <enum>Qt::RichText</enum>
     </property>
     <property name="textInteractionFlags">
-     <set>Qt::LinksAccessibleByMouse</set>
+     <set>Qt::LinksAccessibleByMouse|Qt::TextSelectableByMouse</set>
     </property>
    </widget>
    <widget class="QLabel" name="label_3">
@@ -241,6 +253,9 @@
     </property>
     <property name="cursor">
      <cursorShape>WhatsThisCursor</cursorShape>
+    </property>
+    <property name="mouseTracking">
+     <bool>true</bool>
     </property>
     <property name="toolTip">
      <string>Открытая экспонента</string>
@@ -340,18 +355,8 @@
     <property name="scaledContents">
      <bool>false</bool>
     </property>
-   </widget>
-   <widget class="QLabel" name="label_5">
-    <property name="geometry">
-     <rect>
-      <x>800</x>
-      <y>250</y>
-      <width>47</width>
-      <height>13</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string/>
+    <property name="textInteractionFlags">
+     <set>Qt::LinksAccessibleByMouse|Qt::TextSelectableByMouse</set>
     </property>
    </widget>
    <widget class="QLabel" name="label_6">
@@ -368,8 +373,20 @@
       <pointsize>12</pointsize>
      </font>
     </property>
+    <property name="cursor">
+     <cursorShape>WhatsThisCursor</cursorShape>
+    </property>
+    <property name="mouseTracking">
+     <bool>true</bool>
+    </property>
+    <property name="statusTip">
+     <string>Генерация простых чисел производится с использованием теста Миллера-Рабина.</string>
+    </property>
     <property name="text">
-     <string>Генерация ключей</string>
+     <string>Генерация простых чисел</string>
+    </property>
+    <property name="textInteractionFlags">
+     <set>Qt::LinksAccessibleByMouse|Qt::TextSelectableByMouse</set>
     </property>
    </widget>
    <widget class="QWidget" name="layoutWidget">
@@ -553,14 +570,35 @@
    <widget class="QPushButton" name="Generate_button">
     <property name="geometry">
      <rect>
-      <x>609</x>
-      <y>350</y>
+      <x>670</x>
+      <y>400</y>
       <width>111</width>
       <height>23</height>
      </rect>
     </property>
     <property name="text">
      <string>Генерировать</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="Time_of_generate">
+    <property name="geometry">
+     <rect>
+      <x>640</x>
+      <y>350</y>
+      <width>191</width>
+      <height>18</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Время генерации (мс):</string>
+    </property>
+    <property name="textInteractionFlags">
+     <set>Qt::LinksAccessibleByMouse|Qt::TextSelectableByMouse</set>
     </property>
    </widget>
    <zorder>label</zorder>
@@ -574,13 +612,13 @@
    <zorder>Bit_SLider</zorder>
    <zorder>label_4</zorder>
    <zorder>Bit_label</zorder>
-   <zorder>label_5</zorder>
    <zorder>label_6</zorder>
    <zorder>layoutWidget</zorder>
    <zorder>p</zorder>
    <zorder>q</zorder>
    <zorder>verticalLayoutWidget</zorder>
    <zorder>Generate_button</zorder>
+   <zorder>Time_of_generate</zorder>
   </widget>
   <widget class="QStatusBar" name="statusBar">
    <property name="font">

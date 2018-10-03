@@ -35,10 +35,7 @@ SOURCES += \
 HEADERS += \
     form.h \
     random.hpp \
-    isprime.h \
-    mainwindow.h \
-    eratosphen.h \
-    sumstring.h
+    mainwindow.h
 
 FORMS += \
     form.ui \

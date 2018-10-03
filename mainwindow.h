@@ -17,6 +17,7 @@ public:
     ~MainWindow();
   boost::multiprecision::uint1024_t  bignum(QString a, QString b);
   boost::multiprecision::uint1024_t bignum_1(QString a, QString b);
+  boost::multiprecision::uint1024_t QStringToBig(QString a);
 signals:
     void set_open_keys();
     void is_a_prime();
