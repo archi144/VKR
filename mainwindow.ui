@@ -38,7 +38,7 @@
    <string>Обучалка Алгоритмам</string>
   </property>
   <property name="windowIcon">
-   <iconset resource="resources.qrc">
+   <iconset>
     <normaloff>:/new/prefix1/mtv-possibilities.ico</normaloff>:/new/prefix1/mtv-possibilities.ico</iconset>
   </property>
   <property name="inputMethodHints">
@@ -353,83 +353,6 @@
      </item>
     </layout>
    </widget>
-   <widget class="QTextEdit" name="p">
-    <property name="geometry">
-     <rect>
-      <x>60</x>
-      <y>120</y>
-      <width>321</width>
-      <height>31</height>
-     </rect>
-    </property>
-    <property name="focusPolicy">
-     <enum>Qt::StrongFocus</enum>
-    </property>
-    <property name="layoutDirection">
-     <enum>Qt::LeftToRight</enum>
-    </property>
-    <property name="inputMethodHints">
-     <set>Qt::ImhNone</set>
-    </property>
-    <property name="frameShape">
-     <enum>QFrame::StyledPanel</enum>
-    </property>
-    <property name="frameShadow">
-     <enum>QFrame::Sunken</enum>
-    </property>
-    <property name="verticalScrollBarPolicy">
-     <enum>Qt::ScrollBarAlwaysOff</enum>
-    </property>
-    <property name="horizontalScrollBarPolicy">
-     <enum>Qt::ScrollBarAlwaysOff</enum>
-    </property>
-    <property name="sizeAdjustPolicy">
-     <enum>QAbstractScrollArea::AdjustIgnored</enum>
-    </property>
-    <property name="tabChangesFocus">
-     <bool>true</bool>
-    </property>
-    <property name="lineWrapMode">
-     <enum>QTextEdit::NoWrap</enum>
-    </property>
-    <property name="placeholderText">
-     <string>Простое число 1</string>
-    </property>
-   </widget>
-   <widget class="QTextEdit" name="q">
-    <property name="geometry">
-     <rect>
-      <x>60</x>
-      <y>170</y>
-      <width>321</width>
-      <height>31</height>
-     </rect>
-    </property>
-    <property name="mouseTracking">
-     <bool>false</bool>
-    </property>
-    <property name="focusPolicy">
-     <enum>Qt::StrongFocus</enum>
-    </property>
-    <property name="inputMethodHints">
-     <set>Qt::ImhNone</set>
-    </property>
-    <property name="verticalScrollBarPolicy">
-     <enum>Qt::ScrollBarAlwaysOff</enum>
-    </property>
-    <property name="horizontalScrollBarPolicy">
-     <enum>Qt::ScrollBarAlwaysOff</enum>
-    </property>
-    <property name="tabChangesFocus">
-     <bool>true</bool>
-    </property>
-    <property name="lineWrapMode">
-     <enum>QTextEdit::NoWrap</enum>
-    </property>
-    <property name="placeholderText">
-     <string>Простое число 2</string>
-    </property>
-   </widget>
    <widget class="QWidget" name="verticalLayoutWidget">
     <property name="geometry">
      <rect>
@@ -675,7 +598,7 @@
       <x>0</x>
       <y>56</y>
       <width>1111</width>
-      <height>591</height>
+      <height>611</height>
      </rect>
     </property>
     <property name="sizePolicy">
@@ -707,6 +630,57 @@
       </property>
       <property name="text">
        <string>Отображать ключи в 16-ном формате</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_4">
+      <property name="geometry">
+       <rect>
+        <x>-20</x>
+        <y>-10</y>
+        <width>521</width>
+        <height>361</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;img src=&quot;:/new/prefix1/kisspng-red-x-letter-computer-icons-red-x-5ac2fb7587dc52.5179004815227277975565.jpg&quot;/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_7">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>380</x>
+        <y>43</y>
+        <width>47</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;img src=&quot;:/1.png&quot;/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+      <property name="pixmap">
+       <pixmap>:/cross red icon.png</pixmap>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_8">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>380</x>
+        <y>94</y>
+        <width>41</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;img src=&quot;:/1.png&quot;/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+      <property name="pixmap">
+       <pixmap>:/cross red icon.png</pixmap>
       </property>
      </widget>
     </widget>
@@ -869,6 +843,35 @@
      </layout>
     </widget>
    </widget>
+   <widget class="QLineEdit" name="p">
+    <property name="geometry">
+     <rect>
+      <x>60</x>
+      <y>120</y>
+      <width>321</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="inputMask">
+     <string/>
+    </property>
+    <property name="placeholderText">
+     <string>Простое число 1</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="q">
+    <property name="geometry">
+     <rect>
+      <x>60</x>
+      <y>170</y>
+      <width>321</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="placeholderText">
+     <string>Простое число 2</string>
+    </property>
+   </widget>
    <zorder>tabWidget</zorder>
    <zorder>label</zorder>
    <zorder>TItle</zorder>
@@ -880,14 +883,14 @@
    <zorder>label_3</zorder>
    <zorder>label_6</zorder>
    <zorder>layoutWidget</zorder>
-   <zorder>p</zorder>
-   <zorder>q</zorder>
    <zorder>verticalLayoutWidget</zorder>
    <zorder>Generate_button</zorder>
    <zorder>Time_of_generate</zorder>
    <zorder>label_5</zorder>
    <zorder>d</zorder>
    <zorder>Closed_Keys</zorder>
+   <zorder>p</zorder>
+   <zorder>q</zorder>
   </widget>
   <widget class="QMenuBar" name="menuBar">
    <property name="geometry">
@@ -898,18 +901,6 @@
      <height>21</height>
     </rect>
    </property>
-   <widget class="QMenu" name="menu">
-    <property name="title">
-     <string>Генерация ключей</string>
-    </property>
-   </widget>
-   <widget class="QMenu" name="menu_2">
-    <property name="title">
-     <string>Шифрование/Дешифрование</string>
-    </property>
-   </widget>
-   <addaction name="menu"/>
-   <addaction name="menu_2"/>
   </widget>
   <widget class="QStatusBar" name="statusBar">
    <property name="font">
@@ -924,8 +915,6 @@
   <tabstop>Generate_Prime</tabstop>
   <tabstop>generate_size</tabstop>
   <tabstop>Generate_button</tabstop>
-  <tabstop>p</tabstop>
-  <tabstop>q</tabstop>
   <tabstop>n</tabstop>
   <tabstop>fi</tabstop>
   <tabstop>e</tabstop>
@@ -933,8 +922,6 @@
   <tabstop>Calculate_Button</tabstop>
   <tabstop>pushButton_2</tabstop>
  </tabstops>
- <resources>
-  <include location="resources.qrc"/>
- </resources>
+ <resources/>
  <connections/>
 </ui>

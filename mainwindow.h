@@ -19,6 +19,7 @@ public:
   boost::multiprecision::uint1024_t bignum_1(QString &a, QString &b);
   boost::multiprecision::uint1024_t QStringToBig(QString &a);     //представляет строку в виде переменной uint1024_t
   QString DECstr_To_HEXstr(QString &a);       //из 10-ной системы счисления в 16-ную
+  QStringList strlist;
 signals:
     void set_open_keys();
     void set_closed_keys();
@@ -39,6 +40,12 @@ private slots:
     void on_Shifr_button_clicked();
 
     void on_check_16Hex_clicked();
+
+    void on_Deshifr_button_clicked();
+
+    void on_p_textChanged();
+
+    void on_q_textChanged();
 
 private:
 
